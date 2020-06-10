@@ -1,3 +1,8 @@
+/**
+ * main - Code starting point
+ *
+ * Return: Returns to 0 when complete
+ */
 #include <stdio.h>
 #include <string.h>
 int main(void)
