@@ -3,14 +3,14 @@
 /**
  * main - prints alphabet
  *
- * Return: prints alphabet in lower case
+ * Return: prints alphabet backwards
  */
 
 int main(void)
 {
 	char ch;
 
-	for (ch = 'a' ; ch <= 'z' ; ch++)
+	for (ch = 'z' ; ch >= 'a' ; ch--)
 	{
 		putchar(ch);
 	}
