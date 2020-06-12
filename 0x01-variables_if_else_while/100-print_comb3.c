@@ -17,7 +17,11 @@ int main(void)
 	{
 		for (o = 49 ; o <= 57 ; o++)
 		{
-			if (t <= o)
+			if (t = o)
+			{
+				o++;
+			}
+			else
 			{
 				putchar(t);
 				putchar(o);
@@ -30,10 +34,6 @@ int main(void)
 				{
 					o++;
 				}
-			}
-			else
-			{
-				o++;
 			}
 		}
 	}
