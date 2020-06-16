@@ -1,10 +1,16 @@
-#include <unistd.h>
-int print_alphabet(char c)
+#include "holberton.h"
+
+/**
+ * print_alphabet - prints alphabet
+ */
+
+void print_alphabet(void)
 {
-	for(c = 'a' ; c <= 'z' ; c++)
+	int c;
+
+	for (c = 'a' ; c <= 'z' ; c++)
 	{
 		_putchar(c);
 	}
 	_putchar('\n');
-	return(0);
 }
