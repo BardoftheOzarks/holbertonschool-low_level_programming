@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - determines if char is alpha
+ * @c: a char or ascii int
  *
  * Return: 1 if alpha
  */

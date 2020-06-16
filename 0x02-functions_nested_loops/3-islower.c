@@ -2,6 +2,9 @@
 
 /**
  * _islower - determines if char is lower case
+ * @c: a char or ascii int
+ *
+ * Return: 1 for lower case char
  */
 
 int _islower(int c)
