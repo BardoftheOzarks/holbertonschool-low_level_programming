@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * print_line - prints "_"s
+ * print_diagonal - prints \s
  * @n: input int
  *
- * Description: prints _ x int n
+ * Description: prints \ x int n
  */
 
 void print_diagonal(int n)
