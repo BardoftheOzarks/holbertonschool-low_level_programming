@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
- * mult - multiplies two int
+ * mul - multiplies two int
  * @a: first int
  * @b: second int
  *
  * Return: product
  */
 
-int mult(int a, int b)
+int mul(int a, int b)
 {
 	int c;
 
