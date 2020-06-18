@@ -2,6 +2,7 @@
 
 /**
  * _isupper - determines if char is upper case
+ * @c: an int
  *
  * Return: 1 if upper, 0 if lower
  */

@@ -2,6 +2,7 @@
 
 /**
  * _isdigit - determines if char is numeric
+ * @c: an int
  *
  * Return: 1 if true, 0 if false
  */

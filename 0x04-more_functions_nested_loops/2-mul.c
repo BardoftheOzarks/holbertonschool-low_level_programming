@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * mul - multiplies two int
+ * mult - multiplies two int
+ * @a: first int
+ * @b: second int
  *
  * Return: product
  */
