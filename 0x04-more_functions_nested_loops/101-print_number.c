@@ -12,6 +12,7 @@ void print_number(int n)
 	int clone, reverse;
 
 	clone = n;
+	reverse = 0;
 	if (clone < 0)
 	{
 		_putchar('-');
@@ -29,5 +30,4 @@ void print_number(int n)
 		_putchar((reverse % 10) + '0');
 		reverse = reverse / 10;
 	}
-	_putchar('\n');
 }
