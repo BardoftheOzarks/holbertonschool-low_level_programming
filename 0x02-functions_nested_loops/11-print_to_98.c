@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
  * print_to_98 - prints int to 98
+ * @n: an int
  *
  * Return: prints a sequence of numbers to 98
  */
