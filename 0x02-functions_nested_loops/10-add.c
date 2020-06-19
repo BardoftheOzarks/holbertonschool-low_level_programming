@@ -1,6 +1,8 @@
 #include "holberton.h"
 /**
  * add - adds two variables together
+ * @a: an int
+ * @b: an int
  *
  * Return: int1 + int2
  */
