@@ -1,11 +1,8 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <string.h>
+
 /**
  * rev_string - reverses a string
  * @s: an string
- *
- * Return: reverse string
  */
 void rev_string(char *s)
 {
@@ -16,7 +13,7 @@ void rev_string(char *s)
 	length = _strlen(s);
 	for (c = 0; c < length - 1; c++)
 		end++;
- 	for (c = 0; c < length / 2; c++)
+	for (c = 0; c < length / 2; c++)
 	{
 		temp = *end;
 		*end = *begin;
@@ -25,6 +22,12 @@ void rev_string(char *s)
 		end--;
 	}
 }
+/**
+ * _strlen - counts string length
+ * @s: an string
+ *
+ * Return: string length
+ */
 int _strlen(char *s)
 {
 	int c = 0;
