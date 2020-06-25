@@ -9,21 +9,13 @@ void puts_half(char *str)
 	int c, length = 0;
 	char *begin, *end, temp;
 
-	
-}
-/**
- * _strlen - counts string length
- * @s: an string
- *
- * Return: string length
- */
-int _strlen(char *s)
-{
-	int c = 0;
-
-	while (s[c] != '\0')
-	{
+	while (str[c] != '\0')
 		c++;
-	}
-	return (c);
+	length = c - 1;
+	if (length % 2 == 0)
+		c = length / 2;
+	else
+		c = (length - 1) / 2;
+	for(; c < length; c++)
+		_putchar(str[c];
 }
