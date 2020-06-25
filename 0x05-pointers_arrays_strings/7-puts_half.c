@@ -1,26 +1,15 @@
 #include "holberton.h"
 
 /**
- * rev_string - reverses a string
- * @s: an string
+ * puts_half - prints half a string
+ * @str: an string
  */
-void rev_string(char *s)
+void puts_half(char *str)
 {
 	int c, length = 0;
 	char *begin, *end, temp;
 
-	begin = end = s;
-	length = _strlen(s);
-	for (c = 0; c < length - 1; c++)
-		end++;
-	for (c = 0; c < length / 2; c++)
-	{
-		temp = *end;
-		*end = *begin;
-		*begin = temp;
-		begin++;
-		end--;
-	}
+	
 }
 /**
  * _strlen - counts string length
