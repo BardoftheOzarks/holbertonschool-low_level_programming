@@ -1,40 +1,20 @@
 #include "holberton.h"
 
 /**
- * rev_string - reverses a string
- * @s: an string
- */
-void rev_string(char *s)
-{
-	int c, length = 0;
-	char *begin, *end, temp;
-
-	begin = end = s;
-	length = _strlen(s);
-	for (c = 0; c < length - 1; c++)
-		end++;
-	for (c = 0; c < length / 2; c++)
-	{
-		temp = *end;
-		*end = *begin;
-		*begin = temp;
-		begin++;
-		end--;
-	}
-}
-/**
- * _strlen - counts string length
- * @s: an string
+ * _strcpy - copies a string
+ * @dest: destination for new string
+ * @src: source of original string
  *
- * Return: string length
+ * Return: a copy of the string
  */
-int _strlen(char *s)
+char *_strcpy(char *dest, char *src)
 {
-	int c = 0;
-
-	while (s[c] != '\0')
+	for (src = 0; *src != '\0'; src++)
 	{
-		c++;
+		*dest = *src;
+		dest++;
 	}
-	return (c);
+	dest++;
+	*dest = '\0';
+	return (dest);
 }
