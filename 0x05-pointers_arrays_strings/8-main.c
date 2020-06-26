@@ -11,5 +11,6 @@ int main(void)
 
 	array[0] = 98;
 	print_array(array, 0);
+	print_array(array, -1);
 	return (0);
 }
