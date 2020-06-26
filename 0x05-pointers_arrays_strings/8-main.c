@@ -10,6 +10,6 @@ int main(void)
 	int array[1];
 
 	array[0] = 98;
-	print_array(array, -1);
+	print_array(array, 0);
 	return (0);
 }
