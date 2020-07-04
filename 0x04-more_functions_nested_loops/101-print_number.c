@@ -1,37 +1,24 @@
 #include "holberton.h"
 
 /**
- * print_number - prints int
- * @n: an int
+ * print_numbers - prints an int
+ * @n: input int
  *
- * Description: prints an int via putchar
+ * Description: prints an int via _putchar
  */
 
-void print_number(int n)
+void print_numbers(int n)
 {
-	int clone, reverse;
+	float p;
+	int m;
 
-	clone = n;
-	reverse = 0;
-	if (clone < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		clone = clone * -1;
+		n = n * -1;
 	}
-	else if (clone == 0)
-		_putchar('0');
-	while (clone > 0)
-	{
-		reverse = (reverse * 10) + (clone % 10);
-		clone = clone / 10;
-	}
-	while (reverse > 0)
-	{
-		_putchar((reverse % 10) + '0');
-		reverse = reverse / 10;
-	}
-	if (n % 10 == 0)
-	{
-		_putchar('0');
-	}
+	for (p = n ; p >= 10 ; p / 10)
+		continue;
+	for (m = p % 10 ; p == n ; p * 10)
+		_putchar(m + '0');
 }
