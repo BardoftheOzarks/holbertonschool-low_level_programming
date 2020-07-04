@@ -9,7 +9,7 @@
 
 void print_numbers(int n)
 {
-	float p;
+	float p = n;
 	int m;
 
 	if (n < 0)
@@ -17,8 +17,8 @@ void print_numbers(int n)
 		_putchar('-');
 		n = n * -1;
 	}
-	for (p = n ; p >= 10 ; p / 10)
-		continue;
+	while (p >= 10)
+		p = p / 10;
 	for (m = p % 10 ; p == n ; p * 10)
 		_putchar(m + '0');
 }
