@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	int sum = atoi(argv[1]);
 	int change = 0;
 
-	if (argc != 1)
+	if (argc != 2)
 	{	printf("Error\n");
 		return (1);}
 	while (sum > 0){
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 			change = change + (sum / 2);
 			sum = sum % 2;}
 		if (sum == 1)
-			change = change + 1;
+			change = change + 1;}
 	printf("%d\n", change);
 	return (0);
 }
