@@ -9,19 +9,20 @@
  */
 int main(int argc, char **argv)
 {
+	int i = 1;
 	int sum = 0;
 
-	while (argv > 0)
+	while (argc > 1)
 	{
-		if (isalpha(*argv) == 0 || atoi(*argv) < 0)
+		if (isalpha(argv[i]) == 0 || atoi(argv[i]) < 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
 		else
 		{
-			sum = sum + atoi(*argv);
-			argv++;
+			sum = sum + atoi(argv[i]);
+			i++;
 			argc--;
 		}
 	}
