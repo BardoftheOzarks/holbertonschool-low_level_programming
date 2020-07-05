@@ -28,8 +28,10 @@ int main(int argc, char **argv)
 		if (sum >= 2){
 			change = change + (sum / 2);
 			sum = sum % 2;}
-		if (sum == 1)
-			change = change + 1;}
+		if (sum == 1){
+			change = change + 1;
+			sum = sum - 1;}
+	}
 	printf("%d\n", change);
 	return (0);
 }
