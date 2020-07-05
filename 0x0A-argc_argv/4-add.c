@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	while (argc > 1)
 	{
-		if (isalpha(argv[i]) == 0 || atoi(argv[i]) < 0)
+		if (isdigit(argv[i]) == 0 || atoi(argv[i]) < 0)
 		{
 			printf("Error\n");
 			return (1);
