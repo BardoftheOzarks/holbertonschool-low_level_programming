@@ -9,17 +9,16 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 1, sum = 0;
+	int i, sum = 0;
 
-	while (i <= argc)
+	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv[i]) == 0 || atoi(argv[i]) < 0)
+		if (isdigit(atoi(argv[i])) != 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
 		sum = sum + atoi(argv[i]);
-		i++;
 	}
 	printf("%d\n", sum);
 	return (0);
