@@ -9,12 +9,14 @@
  */
 int main(int argc, char **argv)
 {
-	int sum = atoi(argv[1]);
+	int sum;
 	int change = 0;
 
 	if (argc != 2)
 	{	printf("Error\n");
 		return (1); }
+	else
+		sum = atoi(argv[1]);
 	while (sum > 0)
 	{
 		if (sum >= 25)

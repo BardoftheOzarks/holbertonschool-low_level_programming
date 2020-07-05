@@ -9,22 +9,17 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 1;
-	int sum = 0;
+	int i = 1, sum = 0;
 
-	while (argc > 1)
+	while (i <= argc)
 	{
 		if (isdigit(argv[i]) == 0 || atoi(argv[i]) < 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-		else
-		{
-			sum = sum + atoi(argv[i]);
-			i++;
-			argc--;
-		}
+		sum = sum + atoi(argv[i]);
+		i++;
 	}
 	printf("%d\n", sum);
 	return (0);
