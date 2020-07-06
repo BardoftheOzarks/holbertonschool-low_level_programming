@@ -9,11 +9,12 @@
  */
 int main(int argc, char **argv)
 {
-	int i, sum = 0;
+	int i, test, sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(atoi(argv[i])) != 0 || atoi(argv[i]) < 0)
+		test = atoi(argv[i]);
+		if (test == 0)
 		{
 			printf("Error\n");
 			return (1);
