@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	dup = malloc(sizeof(s1) + sizeof(s2));
+	dup = malloc(sizeof(s1) + sizeof(s2) + 1);
 	if (dup == NULL)
 		return (NULL);
 	while (s1[cnt1] != '\0')
