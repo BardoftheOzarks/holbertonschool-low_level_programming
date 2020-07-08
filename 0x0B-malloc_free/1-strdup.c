@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	char *dup;
 	int counter = 0;
 
-	if (str == NULL || str[counter] == '\0')
+	if (str == NULL)
 		return (NULL);
 	dup = malloc(sizeof(str));
 	while (str[counter] != '\0')
@@ -20,5 +20,6 @@ char *_strdup(char *str)
 		dup[counter] = str[counter];
 		counter++;
 	}
+	dup[counter] = '\0';
 	return (dup);
 }
