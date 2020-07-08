@@ -29,5 +29,6 @@ char *str_concat(char *s1, char *s2)
 		cnt1++;
 		cnt2++;
 	}
+	dup[cnt1] = '\0';
 	return (dup);
 }
