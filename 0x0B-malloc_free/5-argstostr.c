@@ -9,6 +9,6 @@
 
 char *argstostr(int ac, char **av)
 {
-	ac--;
+	
 	return (av);
 }
