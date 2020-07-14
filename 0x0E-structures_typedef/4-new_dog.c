@@ -1,6 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * new_dog - creates new dog from structure
  * @name: dog's name
@@ -10,13 +10,29 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *callme, char *human;
-	dog_t *new_dog;
+	int cnt1, cnt2;
+	dog_t *new_pup;
 
-	new_dog = malloc(sizeof(struct dog_t));
-	if (new_dog == NULL)
+	cnt1 = strlen(name);
+	cnt2 = strlen(owner);
+	new_pup = malloc((sizeof(char) * (cnt1 + cnt2 + 2)) + sizeof(float));
+	if (new_pup == NULL)
 		return (NULL);
-	new_dog.name = name;
-	new_dog.age = age;
-	new_dog.owner = owner;
+        new_pup->name = malloc(sizeof(char) * (cnt1 + 1));
+	if (new_pup->name == NULL)
+	{
+		free(new_pup);
+		return (NULL);
+	}
+	strcpy(new_pup->name, name);
+	new_pup->age = age;
+	new_pup->owner = malloc(sizeof(char) * (cnt2 + 1));
+	if (new_pup->owner == NULL)
+	{
+		free(new_pup->name);
+		free(new_pup);
+		return (NULL);
+	}
+	strcpy(new_pup->owner, owner);
+	return (new_pup);
 }
