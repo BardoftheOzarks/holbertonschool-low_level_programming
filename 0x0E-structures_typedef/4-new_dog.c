@@ -10,29 +10,45 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int cnt1, cnt2;
 	dog_t *new_pup;
+	char *n = _strdup(name);
+	char *o = _strdup(owner);
 
-	cnt1 = strlen(name);
-	cnt2 = strlen(owner);
-	new_pup = malloc((sizeof(char) * (cnt1 + cnt2 + 2)) + sizeof(float));
+	new_pup = malloc(sizeof(dog_t));
 	if (new_pup == NULL)
 		return (NULL);
-        new_pup->name = malloc(sizeof(char) * (cnt1 + 1));
-	if (new_pup->name == NULL)
+	if (n == NULL || o == NULL)
 	{
 		free(new_pup);
+		free(n);
+		free(o);
 		return (NULL);
 	}
-	strcpy(new_pup->name, name);
+	new_pup->name = n;
 	new_pup->age = age;
-	new_pup->owner = malloc(sizeof(char) * (cnt2 + 1));
-	if (new_pup->owner == NULL)
-	{
-		free(new_pup->name);
-		free(new_pup);
-		return (NULL);
-	}
-	strcpy(new_pup->owner, owner);
+	new_pup->owner = owner;
 	return (new_pup);
+}
+/**
+ * _strdup - duplicates a string
+ * @str: a string
+ * Return: pointer to new array
+ */
+
+char *_strdup(char *str)
+{
+	char *dup;
+	int counter = 0;
+
+	if (str == NULL)
+		return (NULL);
+	while (str[counter] != '\0')
+		counter++;
+	dup = malloc(sizeof(char) * counter + 1);
+	if (dup == NULL)
+		return (NULL);
+	for (counter = 0; str[counter] != '\0'; counter++)
+		dup[counter] = str[counter];
+	dup[counter] = '\0';
+	return (dup);
 }
