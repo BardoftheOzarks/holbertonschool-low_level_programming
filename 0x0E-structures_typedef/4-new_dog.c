@@ -15,8 +15,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	n = _strdup(name);
 	if (n == NULL)
-	{	free(n);
-		return (NULL);}
+	{
+		free(n);
+		return (NULL);
+	}
 	o = _strdup(owner);
 	if (o == NULL)
 	{
@@ -56,7 +58,10 @@ char *_strdup(char *str)
 		counter++;
 	dup = malloc(sizeof(char) * counter + 1);
 	if (dup == NULL)
+	{
+		free(dup);
 		return (NULL);
+	}
 	for (counter = 0; str[counter] != '\0'; counter++)
 		dup[counter] = str[counter];
 	dup[counter] = '\0';
