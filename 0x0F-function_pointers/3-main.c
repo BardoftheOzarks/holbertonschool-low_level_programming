@@ -25,7 +25,7 @@ int main(int ac, char **av)
 	if (func == NULL)
 	{
 		printf("Error\n");
-		return(99);
+		return (99);
 	}
 	a = atoi(av[1]);
 	b = atoi(av[3]);
