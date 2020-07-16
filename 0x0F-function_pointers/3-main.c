@@ -9,25 +9,28 @@
  */
 int main(int ac, char **av)
 {
-	int result;
+	int result, a, b, (*func)(int, int);
 
 	if (ac != 4)
 	{
 		printf("Error\n");
 		return (98);
 	}
-	if(atoi(av[3]) == 0 && (av[2] == '/' || av[2] == '%'))
+
+	if(atoi(av[3]) == 0 && (*av[2] == '/' || *av[2] == '%'))
 	{
 		printf("Error\n");
 		return (100);
 	}
-	
-
-	result = 
-	if (result == NULL)
+	func = get_op_func(av[2]);
+	if (func == NULL)
         {
                 printf("Error\n");
                 return(99);
         }
-	printf("%d\n", result)
+	a = atoi(av[1]);
+	b = atoi(av[3]);
+	result = func(a, b);
+	printf("%d\n", result);
+	return (0);
 }
