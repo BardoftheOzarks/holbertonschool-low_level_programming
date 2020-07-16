@@ -16,18 +16,17 @@ int main(int ac, char **av)
 		printf("Error\n");
 		return (98);
 	}
-
-	if(atoi(av[3]) == 0 && (*av[2] == '/' || *av[2] == '%'))
+	if (atoi(av[3]) == 0 && (*av[2] == '/' || *av[2] == '%'))
 	{
 		printf("Error\n");
 		return (100);
 	}
 	func = get_op_func(av[2]);
 	if (func == NULL)
-        {
-                printf("Error\n");
-                return(99);
-        }
+	{
+		printf("Error\n");
+		return(99);
+	}
 	a = atoi(av[1]);
 	b = atoi(av[3]);
 	result = func(a, b);
