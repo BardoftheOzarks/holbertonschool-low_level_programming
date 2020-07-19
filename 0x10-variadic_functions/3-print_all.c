@@ -3,8 +3,7 @@
 #include "variadic_functions.h"
 /**
  * print_all - prints urvathang
- * @separator: string to be printed between ints
- * @n: number of strings
+ * @format: format delaration of field
  */
 void print_all(const char * const format, ...)
 {
@@ -37,7 +36,8 @@ void print_all(const char * const format, ...)
 		default:
 			break;
 		}
-		if (format[i + 1] != '\0' && (f == 'c' || f == 'f' || f == 'i' || f == 's'))
+		if (format[i + 1] != '\0' &&
+		    (f == 'c' || f == 'f' || f == 'i' || f == 's'))
 			printf(", ");
 		i++;
 	}
