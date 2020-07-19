@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include "variadic_functions.h"
 /**
  * print_all - prints urvathang
@@ -31,8 +30,7 @@ void print_all(const char * const format, ...)
 			s = va_arg(list, char *);
 			if (s == NULL || s[0] == '\0')
 				printf("(nil)");
-			else
-				printf("%s", s);
+			printf("%s", s);
 			break;
 		default:
 			break;
