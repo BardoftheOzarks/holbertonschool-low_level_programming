@@ -28,8 +28,8 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			s = va_arg(list, char *);
-			if (s == NULL || s[0] == '\0')
-				printf("(nil)");
+			if (s == NULL)
+				s = "(nil)";
 			printf("%s", s);
 			break;
 		default:
