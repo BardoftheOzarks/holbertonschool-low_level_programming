@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * list len - returns size of list_t
+ * list_len - returns size of list_t
  * @h: pointer to list_t
  * Return: size_t
  */
