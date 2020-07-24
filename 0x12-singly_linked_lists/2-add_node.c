@@ -1,17 +1,38 @@
 #include "lists.h"
 /**
- * list_len - returns size of list_t
- * @h: pointer to list_t
- * Return: size_t
+ * _strlen - counts string length
+ * @s: an string
+ *
+ * Return: string length
  */
-size_t list_len(const list_t *h)
+int _strlen(const char *s)
 {
-	int nodes = 0;
+	int c = 0;
 
-	while (h != NULL)
-	{
-		nodes++;
-		h = h->next;
-	}
-	return (nodes);
+	while (s[c] != '\0')
+		c++;
+	return (c);
+}
+/**
+ * add_node - adds a list_t to beginning
+ * @head: pointer to list_t
+ * @str: input string
+ * Return: * to new list
+ */
+list_t *add_node(list_t **head, const char *str)
+{
+	list_t *new;
+
+	if (str == NULL)
+		return (NULL);
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
+	new->str = strdup(str);
+	if (new->str == NULL)
+		return (NULL);
+	new->len = _strlen(str);
+	new->next = *head;
+	*head = new;
+	return (new);
 }
