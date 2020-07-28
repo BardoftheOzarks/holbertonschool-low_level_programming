@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  * sum_listint - adds sum of all ints
  * @head: start of list
