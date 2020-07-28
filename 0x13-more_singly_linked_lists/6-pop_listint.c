@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * free_listint2 - frees a listint_t
- * @head: pointer to listint_t
+ * pop_listint - frees a listint_t head
+ * @head: int from head
  */
-void free_listint2(listint_t **head)
+int pop_listint(listint_t **head)
 {
 	listint_t *scan = *head, *tmp;
 	int n;
