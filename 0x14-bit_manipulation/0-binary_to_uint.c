@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[ptr] == '1')
 			sum += digit;
-		digit *= 2;
+		digit << 1;
 	}
 	return (sum);
 }
