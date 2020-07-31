@@ -5,23 +5,16 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int digit = 1;
-
-	while (digit <= n)
-		digit = digit << 1;
-	digit = digit >> 1;
-	while (digit > 0)
-	{
-		if (n >= digit)
+		if (n == 1)
 		{
 			_putchar('1');
-			n -= digit;
-			digit = digit >> 1;
+			return;
 		}
-		else
+		else if (n == 0)
 		{
 			_putchar('0');
-			digit = digit >> 1;
+			return
 		}
-	}
+		print_binary(n >> 1);
+		putchar('0' + (n & 1));
 }
