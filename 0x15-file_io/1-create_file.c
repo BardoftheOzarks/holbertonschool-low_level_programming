@@ -15,7 +15,7 @@ int create_file(const char *filename, char *text_content)
 	while (text_content[size] != '\0')
 		size++;
 	test = write(fd, text_content, size);
-	close(fd)
+	close(fd);
 	if (test == -1)
 		return (-1);
 	return (1);
