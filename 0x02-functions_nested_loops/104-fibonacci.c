@@ -23,7 +23,7 @@ int main(void)
 	b1 = b1 % 1000000000;
 	c2 = c1 / 1000000000;
 	c1 = c1 % 1000000000;
-	for (; num <= 98; num++)
+	for (; num <= 97; num++)
 	{
 		printf("%lu%lu, ", c2, c1);
 		a1 = b1;
