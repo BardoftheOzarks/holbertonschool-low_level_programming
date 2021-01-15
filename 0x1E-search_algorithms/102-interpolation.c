@@ -13,11 +13,12 @@ int interpolation_search(int *array, size_t size, int value)
 	if (array != NULL)
 		while (left <= right)
 		{
-			if (value == array[left])
-			{
-				printf("Value checked array[%d] = [%d]\n", left, array[left]);
-				return (array[left]);
-			}
+			/*if (value == array[left])
+			 *{
+			 *	printf("Value checked array[%d] = [%d]\n", left, array[left]);
+			 *	return (array[left]);
+			 *}
+			 */
 			middle = left + (((double)(right - left) / (array[right] - array[left])) *
 					 (value - array[left]));
 			if (middle > right)
