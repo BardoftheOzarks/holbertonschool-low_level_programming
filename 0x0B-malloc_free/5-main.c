@@ -7,12 +7,16 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int main(int ac, char *av[])
 {
-	char *concat;
+	char *s;
 
-	concat = string_nconcat("Holberton ", "School !!!", 6);
-	printf("%s\n", concat);
-	free(concat);
+	s = argstostr(ac, av);
+	if (s == NULL)
+	{
+		return (1);
+	}
+	printf("%s", s);
+	free(s);
 	return (0);
 }
