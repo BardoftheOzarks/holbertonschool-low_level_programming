@@ -13,7 +13,7 @@ int advanced_binary(int *array, size_t size, int value)
 	if (array != NULL)
 		while (left <= right)
 		{
-			printf("searching in array: ");
+			printf("Searching in array: ");
 			for (i = left; i <= right; i++)
 			{
 				if (i == right)
