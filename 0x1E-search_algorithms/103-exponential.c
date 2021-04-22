@@ -7,7 +7,8 @@
  * Return: index of value, or -1 if not found
  */
 int exponential_search(int *array, size_t size, int value)
-{	size_t left, right = 1, middle, i;
+{
+	size_t left, right = 1, middle, i;
 
 	if (array != NULL)
 	{
@@ -23,7 +24,8 @@ int exponential_search(int *array, size_t size, int value)
 		printf("Value found between indexes [%lu] and [%lu]\n",
 		       left, right);
 		while (left <= right)
-		{	printf("Searching in array: ");
+		{
+			printf("Searching in array: ");
 			for (i = left; i <= right; i++)
 			{
 				if (i == right)
@@ -36,7 +38,7 @@ int exponential_search(int *array, size_t size, int value)
 				return (middle);
 			else if (array[middle] < value)
 				left = middle + 1;
-			else if (array[middle] > value)
+			else
 				right = middle - 1;
 		}
 	}
