@@ -36,7 +36,7 @@ int advanced_binary(int *array, size_t size, int value)
 			return (middle + i);
 		}
 		else
-			return (advanced_binary(array, middle, value));
+			return (advanced_binary(array, middle + 1, value));
 	}
 	return (-1);
 }
